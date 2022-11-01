@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import * as api from '../api';
 
 const ReviewList = (props) => {
-    const {reviews, setReviews, selectedCategory} = props
+    const {reviews, setReviews, selectedCategory, id, setId} = props
     
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -43,6 +43,8 @@ const ReviewList = (props) => {
                     posted_on={created_at}
                     score={votes}
                     comment_count={comment_count}
+                    id={id} 
+                    setId={setId}
                 />
             );
         })}

@@ -15,3 +15,10 @@ export const getCategories = () => {
         return response.data.categories
     })
 }
+
+export const getReviewById = (id) => {
+    return myApi.get(`/reviews/${id}`).then((response) => {
+        console.log(response.data.review, "<---- in api")
+        return response.data.review
+    })
+}
