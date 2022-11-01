@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import * as api from '../api';
 
 const ReviewList = (props) => {
-    const {reviews, setReviews} = props
+    const {reviews, setReviews, selectedCategory} = props
     
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -19,13 +19,17 @@ const ReviewList = (props) => {
         })
     }, [])
 
-    
-    // console.log(reviews, '<--- reviews')
-
     return isLoading ? <></> :
     
     <section>
-        {reviews.map(({ review_id, title, category, designer, owner, review_body, review_img_url, created_at, votes, comment_count }) => {
+        {reviews.filter((remainingCat) => {
+            if (selectedCategory === "") {
+                return remainingCat;
+            } else {
+                return remainingCat.category === selectedCategory;
+            }
+        })
+        .map(({ review_id, title, category, designer, owner, review_body, review_img_url, created_at, votes, comment_count }) => {
             return (
                 <ReviewCards 
                     key={review_id}

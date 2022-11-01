@@ -2,7 +2,7 @@
 
 const FilterCategories = (props) => {
 
-    const {categories, setCategories, selectedCategory, setSelectedCategory} = props;
+    const {categories, setSelectedCategory} = props;
 
 
     const handleChange = (event) => {

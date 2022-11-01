@@ -9,10 +9,6 @@ const Categories = (props) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    
-
-    console.log(selectedCategory)
-
     useEffect(() => {
         setIsLoading(true)
         api.getCategories().then(( allCategories ) => {
@@ -26,7 +22,7 @@ const Categories = (props) => {
 
     return isLoading ? <h2>Loading..</h2> :
         <div>
-            <FilterCategories categories={categories} setCategories={setCategories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+            <FilterCategories categories={categories} setSelectedCategory={setSelectedCategory} />
         </div>
     
 }
