@@ -1,7 +1,11 @@
 import axios from "axios";
 
+const myApi = axios.create({
+    baseURL: 'https://dh-nc-games.herokuapp.com/api'
+});
+
 export const getReviews = () => {
-    return axios.get('https://dh-nc-games.herokuapp.com/api/reviews').then((response) => {
+    return myApi.get('/reviews').then((response) => {
         return response.data.reviews
     })
 }
