@@ -1,12 +1,15 @@
-
+import { useNavigate } from "react-router-dom";
 
 const FilterCategories = (props) => {
-
     const {categories, setSelectedCategory} = props;
 
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
-        setSelectedCategory(event.target.value)
+        const category = event.target.value;
+        setSelectedCategory(category)
+        category === "" ? navigate("") : navigate(`?category_name=${category}`)
+        
     }
 
     return <section>

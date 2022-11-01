@@ -4,7 +4,7 @@ import FilterCategories from './FilterCategories'
 
 const Categories = (props) => {
   
-    const {categories, setCategories, selectedCategory, setSelectedCategory} = props;
+    const {categories, setCategories, setSelectedCategory} = props;
 
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
