@@ -1,14 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import ReviewList from './components/ReviewList';
+import Reviews from './components/Reviews';
 
 function App() {
   return (
+    <BrowserRouter>
       <div className="App">
         <Header />
-        
-        <ReviewList />
+        <Routes>
+          <Route path="/reviews" element={<Reviews /> } />
+
+        </Routes>
       </div>
+    
+    </BrowserRouter>
   );
 }
 
