@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
 import * as api from '../api';
+import FilterCategories from './FilterCategories'
 
 const Categories = (props) => {
-    const {categories, setCategories} = props;
+  
+    const {categories, setCategories, selectedCategory, setSelectedCategory} = props;
+
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    
+
+    console.log(selectedCategory)
 
     useEffect(() => {
         setIsLoading(true)
@@ -15,21 +22,13 @@ const Categories = (props) => {
             setIsLoading(false);
             setError(err)
         })
-    }, [setCategories])
+    }, [])
 
     return isLoading ? <h2>Loading..</h2> :
-    <section>
-        <form action="filter-category">
-            <label htmlFor="search-term">Filter by category</label>
-            <select name="category_name" id="filters">
-                <option value="default" ></option>
-
-                {categories.map((category, index) => {
-                    return <option key={index} value={category.slug}>{category.slug}</option>
-                })}
-            </select>
-        </form>
-    </section>
+        <div>
+            <FilterCategories categories={categories} setCategories={setCategories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+        </div>
+    
 }
 
 export default Categories

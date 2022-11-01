@@ -7,7 +7,6 @@ const ReviewList = (props) => {
     
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    // const [selectedCategory, setSelectedCategory] = useState(null)
 
     useEffect(() => {
         setIsLoading(true);
@@ -23,7 +22,7 @@ const ReviewList = (props) => {
     
     // console.log(reviews, '<--- reviews')
 
-    return isLoading ? <h2></h2> :
+    return isLoading ? <></> :
     
     <section>
         {reviews.map(({ review_id, title, category, designer, owner, review_body, review_img_url, created_at, votes, comment_count }) => {
