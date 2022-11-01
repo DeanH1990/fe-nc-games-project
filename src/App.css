@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center; 
 }
 
 .App-logo {
@@ -14,18 +14,80 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #316be1;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.title-container {
+  margin-left: 15%;
+}
+
+.nav-container {
+  margin-left: 10px;
+}
+
+.nav-img-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.line1, .line2, .line3 {
+  margin-left: 5px;
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.review-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.individual-review-cards {
+  width: 80%;
+  align-items: center;
+  border: solid 2px black;
+  margin: 5px;
+}
+
+.individual-review-cards h3 {
+  margin-bottom: 10px;
+}
+
+.individual-review-cards img {
+  height: fit-content;
+  width: 70%;
+}
+
+.bottom-of-card {
+  display: flex;
+  justify-content: center;
+}
+
+.review-card-info {
+  margin-top: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.review-card-category, .review-card-designer, h4 {
+  margin: 0px 10px;
+}
+
+.bottom-of-card p {
+  margin: 2px 10px;
 }
 
 @keyframes App-logo-spin {
