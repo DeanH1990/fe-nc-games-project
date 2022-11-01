@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './components/Header';
-import ReviewList from './components/ReviewList';
+import Reviews from './components/Reviews';
 
 function App() {
   return (
       <div className="App">
         <Header />
         
-        <ReviewList />
+        <Reviews />
       </div>
   );
 }

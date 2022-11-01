@@ -9,3 +9,9 @@ export const getReviews = () => {
         return response.data.reviews
     })
 }
+
+export const getCategories = () => {
+    return myApi.get('/categories').then((response) => {
+        return response.data.categories
+    })
+}

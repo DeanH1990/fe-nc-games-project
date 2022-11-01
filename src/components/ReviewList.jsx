@@ -2,10 +2,12 @@ import ReviewCards from './ReviewCards'
 import { useEffect, useState } from 'react';
 import * as api from '../api';
 
-const ReviewList = () => {
-    const [reviews, setReviews] = useState(null);
+const ReviewList = (props) => {
+    const {reviews, setReviews} = props
+    
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    // const [selectedCategory, setSelectedCategory] = useState(null)
 
     useEffect(() => {
         setIsLoading(true);
@@ -18,10 +20,12 @@ const ReviewList = () => {
         })
     }, [])
 
-    if (isLoading) {
-        return <h2>Loading..</h2>
-    }
-    return <section>
+    
+    // console.log(reviews, '<--- reviews')
+
+    return isLoading ? <h2></h2> :
+    
+    <section>
         {reviews.map(({ review_id, title, category, designer, owner, review_body, review_img_url, created_at, votes, comment_count }) => {
             return (
                 <ReviewCards 
