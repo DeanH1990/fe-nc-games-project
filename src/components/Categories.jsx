@@ -10,7 +10,6 @@ const Categories = (props) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        setIsLoading(true)
         api.getCategories().then(( allCategories ) => {
             setCategories(allCategories);
             setIsLoading(false);

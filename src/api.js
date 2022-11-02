@@ -15,3 +15,9 @@ export const getCategories = () => {
         return response.data.categories
     })
 }
+
+export const getReviewById = (review_id) => {
+    return myApi.get(`/reviews/${review_id}`).then((response) => {
+        return response.data.review
+    })
+}
