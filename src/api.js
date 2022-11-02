@@ -16,9 +16,8 @@ export const getCategories = () => {
     })
 }
 
-export const getReviewById = (id) => {
-    return myApi.get(`/reviews/${id}`).then((response) => {
-        console.log(response.data.review, "<---- in api")
+export const getReviewById = (review_id) => {
+    return myApi.get(`/reviews/${review_id}`).then((response) => {
         return response.data.review
     })
 }

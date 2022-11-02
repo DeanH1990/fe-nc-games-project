@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
 import * as api from '../api'
 
-const SingleReview = (params) => {
+const SingleReview = () => {
 
-    const { id } = params;
+    const { review_id } = useParams();
 
     const [review, setReview] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -11,8 +12,7 @@ const SingleReview = (params) => {
     
     useEffect(() => {
         setIsLoading(true);
-        api.getReviewById(id).then((singleReview) => {
-            console.log(singleReview)
+        api.getReviewById(review_id).then((singleReview) => {
             setReview(singleReview);
             setIsLoading(false);
         }).catch((err) => {
@@ -21,7 +21,6 @@ const SingleReview = (params) => {
         })
     }, [])
 
-    console.log(review)
     return isLoading ? <h2>Loading..</h2> :
     
         <section>
