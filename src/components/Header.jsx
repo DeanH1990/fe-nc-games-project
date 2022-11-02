@@ -7,8 +7,6 @@ const Header = () => {
     const navOptions = [{"Home": "/"}, {"Reviews": "/reviews"}]
     const [isClosed, setIsClosed] = useState(true);
     
-
-
     return <div className="App-header">
                 <div className='nav-container'>
                     <Nav isClosed={isClosed} setIsClosed={setIsClosed} >

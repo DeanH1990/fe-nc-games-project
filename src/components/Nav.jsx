@@ -1,11 +1,7 @@
-import { useState } from "react";
-
 const Nav = (props) => {
 
     const { children, isClosed, setIsClosed } = props;
     
-
-
     if (isClosed) {
         return <div className="nav-img-container" onClick={() => {setIsClosed(false)}}>
             <div className="line1"></div>
