@@ -9,7 +9,6 @@ const ReviewList = (props) => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        setIsLoading(true);
         api.getReviews().then(( allReviews ) => {
             setReviews(allReviews);
             setIsLoading(false);

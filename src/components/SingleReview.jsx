@@ -11,7 +11,6 @@ const SingleReview = () => {
     const [error, setError] = useState(null);
     
     useEffect(() => {
-        setIsLoading(true);
         api.getReviewById(review_id).then((singleReview) => {
             setReview(singleReview);
             setIsLoading(false);
