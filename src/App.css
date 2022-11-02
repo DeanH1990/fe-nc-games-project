@@ -136,6 +136,14 @@
   justify-content: space-around;
 }
 
+.vote-btn-container {
+  display: flex;
+}
+
+.inc-vote-btn {
+  font-size: 1.5rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
