@@ -3,7 +3,7 @@ import * as api from '../api';
 
 const UpdateVotes = (props) => {
     let { review_id, votes } = props;
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(null);
 
     const [increaseisClicked, setIncreaseIsClicked] = useState(false);
     const [increaseVotes, setIncreaseVotes] = useState(0);
@@ -19,6 +19,7 @@ const UpdateVotes = (props) => {
         }).catch((err) => {
             setIncreaseIsClicked(false);
             setIncreaseVotes((curVotes) => curVotes - 1)
+            setError(err)
         })
     }
 
@@ -27,14 +28,16 @@ const UpdateVotes = (props) => {
         setdecreaseIsClicked(true);
         setIncreaseIsClicked(false);
         api.updateReviewVotesById(review_id, -1).then((data) => {
-            console.log(data)
+           
         }).catch((err) => {
             setdecreaseIsClicked(false);
             setDecreaseVotes((curVotes) => curVotes + 1)
+            setError(err)
         })
     }
 
-    return <>
+    return error ? <h3>Something went wrong, please try again</h3> : 
+    <>
         <p>Votes: {votes } </p>
         <div className='vote-btn-container'>
             <button className='inc-vote-btn' disabled={increaseisClicked} onClick={handleIncreaseVotes}>{'\u{2B06}'}</button>
