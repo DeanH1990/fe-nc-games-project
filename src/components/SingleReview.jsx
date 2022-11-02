@@ -26,7 +26,7 @@ const SingleReview = () => {
         <section> 
             <div className="review-header">
                 <h3>{review.title}</h3>
-                <img src={review.review_img_url} alt="review game image"/>
+                <img src={review.review_img_url} alt="the game"/>
             </div>
             <div className="review-main">
                 <div className="review-main-header">
