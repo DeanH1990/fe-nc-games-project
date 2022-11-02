@@ -27,7 +27,6 @@ const ReviewCards = (props) => {
             <img src={img_url} alt={title} />
             <div className="bottom-of-card">
                 <p>Comments: {comment_count}</p>
-                {/* <p >ID: {review_id}</p>  */}
                 <p>Votes: {score}</p>
             </div>
         </div>

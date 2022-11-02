@@ -58,7 +58,7 @@
 .individual-review-cards {
   width: 80%;
   align-items: center;
-  border: solid 2px black;
+  border: solid 2px rgb(92, 92, 232);
   margin: 5px;
 }
 
@@ -69,6 +69,10 @@
 .individual-review-cards img {
   height: fit-content;
   width: 70%;
+}
+
+.individual-review-cards Link:hover {
+  text-decoration: none;
 }
 
 .bottom-of-card {
@@ -88,6 +92,40 @@
 
 .bottom-of-card p {
   margin: 2px 10px;
+}
+
+.review-header {
+  margin: 5px;
+  border: solid 1px rgb(92, 92, 232);
+
+}
+
+.review-header img {
+  height: fit-content;
+  width: 70%;
+}
+
+.review-main {
+  margin: 5px;
+  border: solid 1px rgb(92, 92, 232);
+  background-color: #316be1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-main p {
+  background-color: white;
+  color: black;
+  opacity: 0.7;
+  width: 90%;
+  align-content: center;
+}
+
+.review-main-header {
+  display: flex;
+  justify-content: space-around;
 }
 
 @keyframes App-logo-spin {

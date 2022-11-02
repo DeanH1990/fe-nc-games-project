@@ -23,9 +23,18 @@ const SingleReview = () => {
 
     return isLoading ? <h2>Loading..</h2> :
     
-        <section>
-            {review.review_id} 
-            {review.title}
+        <section> 
+            <div className="review-header">
+                <h3>{review.title}</h3>
+                <img src={review.review_img_url} />
+            </div>
+            <div className="review-main">
+                <div className="review-main-header">
+                    <h4>{review.owner}</h4>
+                </div>
+                <p>{review.review_body}</p>
+                <p>Votes: {review.votes}</p>
+            </div>
         </section>
     
 }
