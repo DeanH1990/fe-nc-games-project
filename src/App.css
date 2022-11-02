@@ -50,6 +50,10 @@
   transition: 0.4s;
 }
 
+.nav-list {
+  list-style: none;
+}
+
 .homepage img {
   width: 90%;
 }
