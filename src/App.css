@@ -50,6 +50,10 @@
   transition: 0.4s;
 }
 
+.homepage img {
+  width: 90%;
+}
+
 .review-card-container {
   display: flex;
   justify-content: center;
