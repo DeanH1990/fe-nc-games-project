@@ -24,11 +24,14 @@ const SingleReviewComments = (props) => {
 
     return isLoading ? <h3>Loading..</h3> :
         <section>
-            {comments.map((comment) => {
-               return <div className="individual-comment">
+            {comments.map((comment, index) => {
+               return <div className="individual-comment" key={index}>
                     <div className="comment-header">
                         <h4>{comment.author}</h4>
                         <h4>{dayjs(comment.created_at).fromNow()}</h4>
+                    </div>
+                    <div className="comment-body">
+                        <p>{comment.body}</p>
                     </div>
                     
                 </div>
