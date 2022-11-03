@@ -28,3 +28,9 @@ export const updateReviewVotesById = (review_id, number) => {
         return response.data.review
     })
 }
+
+export const getCommentsByReviewId = (review_id) => {
+    return myApi.get(`/reviews/${review_id}/comments`).then((response) => {
+        return response.data.comments
+    })
+}

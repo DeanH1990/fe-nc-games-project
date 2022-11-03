@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import * as api from '../api'
+import SingleReviewComments from "./SingleReviewComments";
 import UpdateVotes from "./UpdateVotes";
 
 const SingleReview = () => {
 
     const { review_id } = useParams();
 
+    
     const [review, setReview] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -19,7 +21,7 @@ const SingleReview = () => {
             setIsLoading(false);
             setError(err);
         })
-    }, [review])
+    }, [review_id])
 
     return isLoading ? <h2>Loading..</h2> :
     
@@ -36,6 +38,7 @@ const SingleReview = () => {
                 
                 <UpdateVotes review_id={review.review_id} votes={review.votes}/>
             </div>
+            <SingleReviewComments review_id={review_id} />
         </section>
     
 }
