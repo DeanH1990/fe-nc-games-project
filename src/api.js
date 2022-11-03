@@ -34,3 +34,14 @@ export const getCommentsByReviewId = (review_id) => {
         return response.data.comments
     })
 }
+
+export const postCommentByReviewId = (review_id, user, comment) => {
+    const newComment = { 
+        username: user,
+        body: comment
+    }
+    return myApi.post(`/reviews/${review_id}/comments`, newComment).then((response) => {
+        console.log(response)
+        return response
+    })
+}
