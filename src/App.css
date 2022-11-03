@@ -182,6 +182,12 @@
 .submit-comment-form input {
   width: 80%;
 }
+ 
+.sort-reviews-header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
 
 @keyframes App-logo-spin {
   from {

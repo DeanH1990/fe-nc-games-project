@@ -15,7 +15,7 @@ const FilterCategories = (props) => {
     return <section>
     <form action="filter-category">
         <label htmlFor="search-term">Filter by category</label>
-        <select name="category_name" id="filters" onChange={handleChange}>
+        <br /><select name="category_name" id="filters" onChange={handleChange}>
             <option value="" ></option>
 
             {categories.map((category, index) => {

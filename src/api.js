@@ -4,10 +4,12 @@ const myApi = axios.create({
     baseURL: 'https://dh-nc-games.herokuapp.com/api'
 });
 
-export const getReviews = () => {
-    return myApi.get('/reviews').then((response) => {
-        return response.data.reviews;
-    })
+
+export const getReviews = (sort_by, order) => {
+    const params = {sort_by, order}
+    return myApi.get(`/reviews`, {params: params}).then((response) => {
+        return response.data.reviews
+        })
 }
 
 export const getCategories = () => {

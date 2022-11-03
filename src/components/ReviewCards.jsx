@@ -15,7 +15,7 @@ const ReviewCards = (props) => {
 
     return <article className="review-card-container">
         <div className="individual-review-cards" >
-            <p>{posted_on}</p>
+            <p>{posted_on.slice(0, 10)}</p>
             <Link to={`/reviews/${review_id}`}>
                 <h3 >{title}</h3>
             </Link>

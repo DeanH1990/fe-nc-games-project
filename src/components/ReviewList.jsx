@@ -2,26 +2,28 @@ import ReviewCards from './ReviewCards'
 import { useEffect, useState } from 'react';
 import * as api from '../api';
 
+
 const ReviewList = (props) => {
-    const {reviews, setReviews, selectedCategory} = props
+    const {reviews, setReviews, selectedCategory, selectedSortBy, order } = props
     
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        api.getReviews().then(( allReviews ) => {
+        api.getReviews(selectedSortBy, order).then(( allReviews ) => {
             setReviews(allReviews);
             setIsLoading(false);
         }).catch((err) => {
             setIsLoading(false);
             setError(err)
         })
-    }, [])
+    }, [selectedSortBy, order])
 
     return isLoading ? <></> :
     
     <section>
-        {reviews.filter((remainingCat) => {
+        {reviews
+        .filter((remainingCat) => {
             if (selectedCategory === "") {
                 return remainingCat;
             } else {
