@@ -155,7 +155,6 @@
 
 .individual-comment h4 {
   color: white;
-  
 }
 
 .comment-header {
@@ -163,7 +162,7 @@
   justify-content: space-between;
 }
 
-.comment-body{
+.comment-body {
   background-color: white;
   color: black;
   opacity: 0.7;
@@ -171,12 +170,25 @@
   margin: 0 auto;
   border-radius: 5px;
 }
-  
+
+.submit-comment-form {
+  margin: 2px;
+}
+ 
+.submit-comment-form fieldset {
+  border: solid 2px rgb(92, 92, 232);
+  border-radius: 5px;
+}
+.submit-comment-form input {
+  width: 80%;
+}
+ 
 .sort-reviews-header {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
