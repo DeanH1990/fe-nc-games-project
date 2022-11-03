@@ -21,3 +21,10 @@ export const getReviewById = (review_id) => {
         return response.data.review
     })
 }
+
+export const updateReviewVotesById = (review_id, number) => {
+    const voteUpdate = {inc_votes: number}
+    return myApi.patch(`/reviews/${review_id}`, voteUpdate).then((response) => {
+        return response.data.review
+    })
+}
