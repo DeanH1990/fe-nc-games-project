@@ -28,7 +28,6 @@ const SingleReviewComments = (props) => {
         <section>
             <PostComment review_id={review_id} setNewComment={setNewComment} />
             {comments.map((comment, index) => {
-                console.log(comment)
                return <div className="individual-comment" key={index}>
                     <div className="comment-header">
                         <h4>{comment.author}</h4>

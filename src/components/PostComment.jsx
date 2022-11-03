@@ -16,7 +16,6 @@ const PostComment = (props) => {
         event.preventDefault();
         setIsLoading(true);
         api.postCommentByReviewId(review_id, user, comment).then((response) => {
-            console.log(response)
             setIsLoading(false);
             setNewComment(comment);
             setSucceed(true);
@@ -55,7 +54,6 @@ const PostComment = (props) => {
             <input type="text" id="comment" onChange={handleChange} required/>
             <button type="Submit" >Submit</button>
         </fieldset>
-
     </form>
 }
 
