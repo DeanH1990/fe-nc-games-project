@@ -136,6 +136,22 @@
   justify-content: space-around;
 }
 
+.individual-comment{
+  margin: 15px;
+  border: solid 1px rgb(92, 92, 232);
+  background-color: #316be1;
+  display: flex;
+ 
+}
+
+.individual-comment h4 {
+  color: white;
+}
+
+.comment-header {
+  
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
