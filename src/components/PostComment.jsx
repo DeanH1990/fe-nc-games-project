@@ -50,8 +50,8 @@ const PostComment = (props) => {
         <form className="submit-comment-form" action="add-new-comment" onSubmit={handleSubmit}>
         <fieldset>
             <legend>Add a comment!</legend>
-            <label htmlFor="user">Commenting as: {user}</label>
-            <label htmlFor="comment">Comment</label>
+            <label htmlFor="user">Commenting as: <strong>{user}</strong></label>
+            <br></br><label htmlFor="comment">Comment </label>
             <input type="text" id="comment" onChange={handleChange} required/>
             <button type="Submit" >Submit</button>
         </fieldset>
