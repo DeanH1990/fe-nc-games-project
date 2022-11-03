@@ -9,10 +9,6 @@ const ReviewList = (props) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
-   
-
-    
-
     useEffect(() => {
         api.getReviews(selectedSortBy, order).then(( allReviews ) => {
             setReviews(allReviews);
@@ -22,8 +18,6 @@ const ReviewList = (props) => {
             setError(err)
         })
     }, [selectedSortBy, order])
-
-    // console.log(selectedSortBy)
 
     return isLoading ? <></> :
     
