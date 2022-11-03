@@ -172,7 +172,11 @@
   border-radius: 5px;
 }
   
-
+.sort-reviews-header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
