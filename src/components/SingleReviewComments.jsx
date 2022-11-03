@@ -13,16 +13,16 @@ const SingleReviewComments = (props) => {
 
     useEffect(() => {
         api.getCommentsByReviewId(review_id).then((relatedComments) => {
-            // console.log(relatedComments)
             setComments(relatedComments);
             setIsLoading(false);
         }).catch((err) => {
             setIsLoading(false);
             setError(err);
         })
-    }, [review_id])
+    }, [])
 
     return isLoading ? <h3>Loading..</h3> :
+        error ? <h3>Something went wrong, please try again</h3> :
         <section>
             {comments.map((comment, index) => {
                return <div className="individual-comment" key={index}>
