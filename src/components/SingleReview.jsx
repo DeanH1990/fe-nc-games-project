@@ -21,7 +21,7 @@ const SingleReview = () => {
             setIsLoading(false);
             setError(err);
         })
-    }, [review])
+    }, [review_id])
 
     return isLoading ? <h2>Loading..</h2> :
     
