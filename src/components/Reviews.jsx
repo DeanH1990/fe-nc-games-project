@@ -20,7 +20,7 @@ const Reviews = () => {
 
     return <div>
         <div className="filter-and-sort">
-            <SortBy setSelectedSortBy={setSelectedSortBy} setOrder={setOrder} selectedCategory={selectedCategory} />
+            <SortBy setSelectedSortBy={setSelectedSortBy} setOrder={setOrder} />
             <Categories categories={categories} setCategories={setCategories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} setOrder={setOrder} setSelectedSortBy={setSelectedSortBy}   />
         </div>
         <ReviewList reviews={reviews} setReviews={setReviews} selectedCategory={selectedCategory} selectedSortBy={selectedSortBy} order={order}/>
