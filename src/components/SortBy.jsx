@@ -8,7 +8,7 @@ const SortBy = (props) => {
     const navigate = useNavigate();
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const sortByOptions = ["created_at", "comment_count", "votes", "title", "designer", "owner", "category", ""];
+    const sortByOptions = ["created_at", "comment_count", "votes", "title", "designer", "owner", "category"];
 
     let navStr = ""
 
