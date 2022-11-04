@@ -1,11 +1,8 @@
-import { useContext, useEffect, useState } from "react";
-import { UserContext } from '../App';
+import { useEffect, useState } from "react";
 import * as api from '../api';
 
 const PostComment = (props) => {
-    const { review_id, setNewComment } = props;
-
-    const user = useContext(UserContext);
+    const { review_id, setNewComment, user } = props;
 
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);

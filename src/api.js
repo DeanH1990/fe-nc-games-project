@@ -46,3 +46,9 @@ export const postCommentByReviewId = (review_id, user, comment) => {
         return response;
     })
 }
+
+export const deleteCommentById = (comment_id) => {
+    return myApi.delete(`/comments/${comment_id}`).then((response) => {
+        return response;
+    })
+}

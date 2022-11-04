@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as api from '../api';
 import PostComment from "./PostComment";
+import DeleteComment from "./DeleteComment";
+import { UserContext } from '../App';
 const dayjs = require('dayjs');
 const relativeTime = require('dayjs/plugin/relativeTime');
 dayjs.extend(relativeTime);
@@ -8,10 +10,13 @@ dayjs.extend(relativeTime);
 const SingleReviewComments = (props) => {
     const { review_id } = props;
 
+    const user = useContext(UserContext);
+
     const [comments, setComments] = useState(null);
     const [isLoading, setIsLoading]= useState(true);
     const [error, setError] = useState(null);
     const [newComment, setNewComment] = useState("");
+    const [isDeleted, setIsDeleted] = useState(false)
 
     useEffect(() => {
         api.getCommentsByReviewId(review_id).then((relatedComments) => {
@@ -21,12 +26,12 @@ const SingleReviewComments = (props) => {
             setIsLoading(false);
             setError(err);
         })
-    }, [review_id, newComment])
+    }, [review_id, newComment, isDeleted])
 
     return isLoading ? <h3>Loading..</h3> :
         error ? <h3>Something went wrong, please try again</h3> :
         <section>
-            <PostComment review_id={review_id} setNewComment={setNewComment} />
+            <PostComment review_id={review_id} setNewComment={setNewComment} user={user}/>
             {comments.map((comment, index) => {
                return <div className="individual-comment" key={index}>
                     <div className="comment-header">
@@ -36,7 +41,7 @@ const SingleReviewComments = (props) => {
                     <div className="comment-body">
                         <p>{comment.body}</p>
                     </div>
-                    
+                     {user === comment.author ? <DeleteComment comment_id={comment.comment_id} author={comment.author} user={user} setIsDeleted={setIsDeleted} /> : <></>} 
                 </div>
             })}
         </section>
