@@ -2,7 +2,7 @@ import {  useState } from "react";
 import * as api from '../api';
 
 const DeleteComment = (props) => {
-    const { comment_id, author, user, setIsDeleted } = props;
+    const { comment_id, setIsDeleted } = props;
 
     const [ isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
