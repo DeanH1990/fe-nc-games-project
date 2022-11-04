@@ -4,6 +4,7 @@ import Homepage from './components/Homepage';
 import Header from './components/Header';
 import Reviews from './components/Reviews';
 import SingleReview from './components/SingleReview';
+import ErrorPage from './components/ErrorPage';
 import { createContext, useState } from 'react';
 
 export const UserContext = createContext();
@@ -23,6 +24,7 @@ function App() {
             <Route path="/reviews" element={<Reviews /> } />
             <Route path="/reviews/category/:category" element={<Reviews /> } />
             <Route path="/reviews/:review_id" element={<SingleReview />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
     </UserContext.Provider>

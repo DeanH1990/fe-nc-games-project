@@ -1,14 +1,14 @@
 import ReviewCards from './ReviewCards'
+import ErrorPage from './ErrorPage';
 import { useEffect, useState } from 'react';
 import * as api from '../api';
-
 
 const ReviewList = (props) => {
     const {reviews, setReviews, selectedCategory, selectedSortBy, order } = props
     
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-  
+
     useEffect(() => {
         api.getReviews(selectedCategory, selectedSortBy, order).then(( allReviews ) => {
             setReviews(allReviews);
@@ -20,6 +20,7 @@ const ReviewList = (props) => {
     }, [selectedCategory, selectedSortBy, order])
 
     return isLoading ? <></> :
+            error ?  <h3><ErrorPage message={error.response}/></h3> :
     
     <section>
         {reviews

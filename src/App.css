@@ -189,6 +189,18 @@
   flex-direction: row;
 }
 
+.wrong-route img {
+  width: 90%;
+}
+
+.error-page-404 img {
+  width: 90%;
+}
+
+.error-page-400 img {
+ width: 90%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
