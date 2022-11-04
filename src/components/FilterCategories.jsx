@@ -7,8 +7,14 @@ const FilterCategories = (props) => {
 
     const handleChange = (event) => {
         const category = event.target.value;
-        setSelectedCategory(category)
-        category === "" ? navigate("") : navigate(`?category_name=${category}`)
+        if (category) {
+            setSelectedCategory(category)
+            navigate(`/reviews/category/${category}`)
+
+        } else {
+            setSelectedCategory(category)
+            navigate('/reviews')
+        }
         
     }
 
