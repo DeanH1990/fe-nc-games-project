@@ -2,14 +2,20 @@ import ReviewList from "./ReviewList";
 import Categories from "./Categories";
 import SortBy from "./SortBy";
 import { useState } from 'react';
+import { useParams } from "react-router-dom";
 
 const Reviews = () => {
 
-    const [reviews, setReviews] = useState(null);
-    const [categories, setCategories] = useState(null);
-    const [selectedCategory, setSelectedCategory] = useState("");
+    const {category} = useParams();
+  
+    const [reviews, setReviews] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(category);
     const [selectedSortBy, setSelectedSortBy] = useState("");
     const [order, setOrder] = useState("");
+
+
+
 
 
     return <div>

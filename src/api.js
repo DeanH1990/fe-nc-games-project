@@ -5,8 +5,8 @@ const myApi = axios.create({
 });
 
 
-export const getReviews = (sort_by, order) => {
-    const params = {sort_by, order}
+export const getReviews = (category, sort_by, order) => {
+    const params = {category, sort_by, order}
     return myApi.get(`/reviews`, {params: params}).then((response) => {
         return response.data.reviews
         })
@@ -43,6 +43,12 @@ export const postCommentByReviewId = (review_id, user, comment) => {
         body: comment
     };
     return myApi.post(`/reviews/${review_id}/comments`, newComment).then((response) => {
+        return response;
+    })
+}
+
+export const deleteCommentById = (comment_id) => {
+    return myApi.delete(`/comments/${comment_id}`).then((response) => {
         return response;
     })
 }

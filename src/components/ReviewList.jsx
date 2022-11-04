@@ -8,28 +8,21 @@ const ReviewList = (props) => {
     
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-
+  
     useEffect(() => {
-        api.getReviews(selectedSortBy, order).then(( allReviews ) => {
+        api.getReviews(selectedCategory, selectedSortBy, order).then(( allReviews ) => {
             setReviews(allReviews);
             setIsLoading(false);
         }).catch((err) => {
             setIsLoading(false);
             setError(err)
         })
-    }, [selectedSortBy, order])
+    }, [selectedCategory, selectedSortBy, order])
 
     return isLoading ? <></> :
     
     <section>
         {reviews
-        .filter((remainingCat) => {
-            if (selectedCategory === "") {
-                return remainingCat;
-            } else {
-                return remainingCat.category === selectedCategory;
-            }
-        })
         .map(({ review_id, title, category, designer, owner, review_body, review_img_url, created_at, votes, comment_count }) => {
             return (
                 <ReviewCards 
