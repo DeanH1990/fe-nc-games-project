@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 const FilterCategories = (props) => {
-    const {categories, setSelectedCategory} = props;
+    const {categories, setSelectedCategory, setSelectedSortBy, setOrder} = props;
 
     const navigate = useNavigate();
 
@@ -13,6 +13,8 @@ const FilterCategories = (props) => {
 
         } else {
             setSelectedCategory(category)
+            setOrder("")
+            setSelectedSortBy("")
             navigate('/reviews')
         }
         

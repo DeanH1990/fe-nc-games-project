@@ -4,7 +4,7 @@ import FilterCategories from './FilterCategories'
 
 const Categories = (props) => {
   
-    const {categories, setCategories, setSelectedCategory} = props;
+    const {categories, setCategories, setSelectedCategory, setOrder, setSelectedSortBy} = props;
 
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -21,7 +21,7 @@ const Categories = (props) => {
 
     return isLoading ? <h2>Loading..</h2> :
         <div>
-            <FilterCategories categories={categories} setSelectedCategory={setSelectedCategory} />
+            <FilterCategories categories={categories} setSelectedCategory={setSelectedCategory} setSelectedSortBy={setSelectedSortBy} setOrder={setOrder} />
         </div>
     
 }

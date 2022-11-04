@@ -5,15 +5,19 @@ const SortBy = (props) => {
 
     const navigate = useNavigate();
 
-    const sortByOptions = ["created_at", "comment_count", "votes"];
+    const sortByOptions = ["created_at", "comment_count", "votes", "title", "designer", "owner", "category"];
 
     let navStr = ""
 
     const handleSortBy = (event) => {
         const sortBy = event.target.value;
-        setSelectedSortBy(sortBy)
-        navStr += `?sort_by=${sortBy}`
-        sortBy === "" ? navigate("") : navigate(navStr)  
+        if (sortBy) {
+            setSelectedSortBy(sortBy)
+            navStr += `?sort_by=${sortBy}`
+            navigate(navStr)  
+        } else {
+            setSelectedSortBy(sortBy)
+        }
     }
 
     const handleOrderBy = (event) => {
