@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import * as api from '../api'
 import SingleReviewComments from "./SingleReviewComments";
+import ErrorPage from "./ErrorPage";
 import UpdateVotes from "./UpdateVotes";
 
 const SingleReview = () => {
@@ -24,6 +25,7 @@ const SingleReview = () => {
     }, [review_id])
 
     return isLoading ? <h2>Loading..</h2> :
+            error ?   <h3> <ErrorPage message={error.response} /> </h3> :
     
         <section> 
             <div className="review-header">

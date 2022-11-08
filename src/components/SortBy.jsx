@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 const SortBy = (props) => {
-    const { setSelectedSortBy, setOrder, selectedCategory } = props;
+    const { setSelectedSortBy, setOrder } = props;
 
     const navigate = useNavigate();
 
