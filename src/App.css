@@ -1,16 +1,6 @@
+/* main app styles */
 .App {
   text-align: center; 
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,6 +18,7 @@
   color: #61dafb;
 }
 
+/* header styles */
 .title-container {
   margin: auto
 }
@@ -59,10 +50,12 @@
   cursor: pointer;
 }
 
+/* homepage styles */
 .homepage img {
   width: 90%;
 }
 
+/* review cards */
 .review-card-container {
   display: flex;
   justify-content: center;
@@ -151,6 +144,7 @@
   font-size: 1.5rem;
 }
 
+/* comment section styles */
 .individual-comment{
   margin: 15px;
   border: solid 1px rgb(92, 92, 232);
@@ -198,6 +192,7 @@
   width: 90%;
 }
 
+/* error styles */
 .error-page-404 img {
   width: 90%;
 }
@@ -206,6 +201,7 @@
  width: 90%;
 }
 
+/* non mobile view styling */
 @media only screen and (min-width: 768px) {
   .homepage {
     width: 60%;
@@ -225,14 +221,5 @@
   .single-review-comments-section {
     width: 50%;
     margin: auto;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
