@@ -19,7 +19,7 @@ function App() {
     <UserContext.Provider value={user} >
         <div className="App">
           <Header />
-          <Routes>
+          <Routes >
             <Route path="/" element={<Homepage />} />
             <Route path="/reviews" element={<Reviews /> } />
             <Route path="/reviews/category/:category" element={<Reviews /> } />

@@ -30,7 +30,7 @@ const SingleReviewComments = (props) => {
 
     return isLoading ? <h3>Loading..</h3> :
         error ? <h3>Something went wrong, please try again</h3> :
-        <section>
+        <section className="single-review-comments-section">
             <PostComment review_id={review_id} setNewComment={setNewComment} user={user}/>
             {comments.map((comment, index) => {
                return <div className="individual-comment" key={index}>

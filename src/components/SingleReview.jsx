@@ -28,17 +28,19 @@ const SingleReview = () => {
             error ?   <h3> <ErrorPage message={error.response} /> </h3> :
     
         <section> 
-            <div className="review-header">
-                <h3>{review.title}</h3>
-                <img src={review.review_img_url} alt="the game"/>
-            </div>
-            <div className="review-main">
-                <div className="review-main-header">
-                    <h4>{review.owner}</h4>
+            <div className="single-review-container">
+                <div className="review-header">
+                    <h3>{review.title}</h3>
+                    <img src={review.review_img_url} alt="the game"/>
                 </div>
-                <p>{review.review_body}</p>
-                
-                <UpdateVotes review_id={review.review_id} votes={review.votes}/>
+                <div className="review-main">
+                    <div className="review-main-header">
+                        <h4>{review.owner}</h4>
+                    </div>
+                    <p>{review.review_body}</p>
+                    
+                    <UpdateVotes review_id={review.review_id} votes={review.votes}/>
+                </div>
             </div>
             <SingleReviewComments review_id={review_id} />
         </section>
