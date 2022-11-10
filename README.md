@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# NC Games (React Project)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NC Games is a game review website, users can view reviews, up or down vote reviews and discuss/ comment on reviews. The logged in user also has the ability to delete their own comments.
 
-## Available Scripts
+The site has reviews which are divided into categories. When viewing reviews they can be filtered by the available categories, sorted by appropriate sort by values and the order of which they are shown can be toggled between ascending or descending.
 
-In the project directory, you can run:
+React was used to build the this front end end project which consumes my backend api project.
 
-### `npm start`
+## Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can find the deployed version of this React app [here](https://636cbadc740e76726b77a22c--spectacular-heliotrope-7b5be8.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The hosted api on heroku can be found [here](https://dh-nc-games.herokuapp.com/api/)
 
-### `npm test`
+The api repo is [here](https://github.com/DeanH1990/be-nc-games-project)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Navigating the website
 
-### `npm run build`
+This project has been built with a mobile first approach and scales with other screen sizes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When opening the app you will be greeted with the homepage. You can use the burger menu to navigate to the reviews pages.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+While looking at the reviews, these can be filtered by category, sorted by a sort value or have the order changed.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+By clicking on a specific review, this will bring up the whole review and associated comments. It gives the ability to add more comments as the logged in user and up or down vote the review. The logged in user can also delete their own comments.
 
-### `npm run eject`
+## How to use this repo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone this repo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In order to clone the repo you will need to fork it to youyr github. You can then clone the forked repo using the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    git clone <forked repo url link>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Make sure to change into this directory with:
 
-## Learn More
+    cd fe-nc-games-project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install the required dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Install the required dependecies using the following command:
 
-### Code Splitting
+    npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Run the project locally using this command:
 
-### Analyzing the Bundle Size
+    npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Requirements
 
-### Making a Progressive Web App
+You will need the following minimum versions to run the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Node v18.4.0
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
