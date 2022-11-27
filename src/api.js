@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const myApi = axios.create({
-    baseURL: 'https://dh-nc-games.herokuapp.com/api'
+    baseURL: 'https://dean-hasley-nc-games.cyclic.app/api'
 });
 
 
