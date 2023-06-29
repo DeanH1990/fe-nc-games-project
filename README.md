@@ -10,7 +10,7 @@ React was used to build the this front end end project which consumes my backend
 
 You can find the deployed version of this React app [here](https://dean-hasley-nc-games.netlify.app/)
 
-The hosted api on heroku can be found [here](https://dean-hasley-nc-games.cyclic.app/api)
+The hosted api on cyclic can be found [here](https://dean-hasley-nc-games.cyclic.app/api)
 
 The api repo is [here](https://github.com/DeanH1990/be-nc-games-project)
 
